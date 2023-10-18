@@ -10,4 +10,6 @@ Survey
 3. [การสร้าง ASP.NET Web API](/content/dotnet-web-api/basic/README.md)
 4. [Object-Oriented Programming](content/oop/README.md)
 
+## .NET AI Application
 
+- [การสร้าง AI Application ด้วย Semantic Kernel](content/semantic-kernel/package-suggestion//README.md)
