@@ -17,28 +17,21 @@ namespace pirateShipManagement.model
     // และมี method ชื่อ AddProduct ที่รับ parameter เป็น Product เพื่อนำสินค้าใส่เพิ่มในรายการ
     
     // method ชื่อ CalculateTotal ที่ไล่รวมราคาสินค้าในรายการทั้งหมดแล้วคืนค่าเป็นราคารวม
-    public class ShoppingCart
+    public class OnePieceTreasure
     {
-        // รายการของสินค้าในตระกร้า
-        private List<Product> products = new();
+        private string SecretLocation = "Raftel";
 
-        // เพิ่มสินค้าในตระกร้า  
-        public void AddProduct(Product product)
+        public void GiveHint()
         {
-            products.Add(product);
+            Console.WriteLine("The treasure is located in the Grand Line!");
         }
 
-        // คำนวณราคารวมของสินค้าทั้งหมดในตระกร้า
-        public decimal CalculateTotal()
+        private void RevealSecret()
         {
-            decimal total = 0;
-            foreach (var product in products)
-            {
-                total += product.Price;
-            }
-            return total;
+            Console.WriteLine($"The real location is {SecretLocation}.");
         }
     }
+
 
 }
 ```

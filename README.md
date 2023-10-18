@@ -1,6 +1,8 @@
 
 # .NET handbook
 
+Survey
+
 ## .NET 6 Starter 
 
 1. [การใช้งาน .NET CLI และการสร้าง Console App](/content/dotnet-cli/README.md)

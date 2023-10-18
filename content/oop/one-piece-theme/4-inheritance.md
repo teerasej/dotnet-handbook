@@ -5,27 +5,25 @@
 2. อาจจะมีการเรียก Class ที่สืบทอดคุณสมบัติของอีก Class ว่า **child class** หรือ **sub class**
 3. อาจจะมีการเรียก Class ถูกสืบทอด ว่า **parent class** หรือ **super class**
 
-ให้เราทำการสร้างไฟล์ `model/ShoppingCart.cs`
+ให้เราทำการสร้างไฟล์ `model/StrawHatShip.cs`
 
 ```cs
-// model/ShoppingCart.cs
+// model/StrawHatShip.cs
 
 namespace pirateShipManagement.model
 {
-    // คลาส SaleProduct ที่สืบทอดคุณสมบัติจากคลาส Product และ implements interface ชื่อ IDiscount
-    // การสืบทอดจะทำให้ SaleProduct มีคุณสมบัติที่ Product มีทั้งหมด และมีคุณสมบัติของ IDiscount ด้วย
-    public class SaleProduct : Product, IDiscount
+    // คลาส StrawHatShip ที่สืบทอดคุณสมบัติจากคลาส PirateShip และ implements interface ชื่อ ITreasureMapHolder
+    // การสืบทอดจะทำให้ StrawHatShip มีคุณสมบัติที่ PirateShip มีทั้งหมด และมีคุณสมบัติของ ITreasureMapHolder ด้วย
+    public class StrawHatShip : PirateShip, ITreasureMapHolder
     {
-        // ส่วนนี้เป็น property ที่สืบทอดมาจากคลาส Product
-        public decimal DiscountPercentage { get; set; }
+        public string SpecialFeature { get; set; }
 
-        // ส่วนนีี้เป็น method ที่ต้องมีการเขียนใน class SaleProduct ตามที่ interface IDiscount กำหนด
-        // จะถูกเรียกใช้เพื่อคำนวณส่วนลดของราคาสินค้าในโปรแกรมที่เกี่ยวข้องกับการขายสินค้าออนไลน์ 
-        public decimal ApplyDiscount(decimal originalPrice)
+        public void DisplayMap()
         {
-            return originalPrice * (1 - (DiscountPercentage / 100));
+            Console.WriteLine("Showing the map to One Piece treasure!");
         }
-    }
+    }   
+
 
 }
 ```

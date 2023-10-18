@@ -7,5 +7,4 @@
 3. [Interface](3-interface.md)
 4. [Inheritance](4-inheritance.md)
 5. [Encapsulation](5-encapsulation.md)
-6. [Polymorphism](6-polymorphism.md) 
-7. [การใช้งานคลาสที่สร้างขึ้น](7-put-all.md)
+6. [การใช้งานคลาสที่สร้างขึ้น](7-put-all.md)
