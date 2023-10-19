@@ -9,7 +9,7 @@ dotnet new console -n AIPackageAdvice
 
 ## 2. ติดตั้ง package 
 
-เปิด Terminal มาที่โฟลเดอร์โปรเจค แล้วใช้คำสั่งด้านล่าง [เพื่อติดตั้ง Entity Framework](https://www.nuget.org/packages/Microsoft.SemanticKernel.Core/)
+เปิด Terminal มาที่โฟลเดอร์โปรเจค แล้วใช้คำสั่งด้านล่าง [เพื่อติดตั้ง Semantic Kernel](https://www.nuget.org/packages/Microsoft.SemanticKernel/)
 
 ```bash
 dotnet add package Microsoft.SemanticKernel --version 1.0.0-beta2
