@@ -122,15 +122,15 @@ packageInfo += "";
 
 // สร้าง prompt ขึ้นมา โดยกำหนดให้ AI ช่วยวิเคราะห์ข้อความ และมีการใช้งานตัวแปร $input ใน prompt
 var prompt = @$"
-Summarize and suggest the health check-up packages for user who prompt input:
-{{$input}}
+Give Advice about the health check-up packages in context for user who prompt input:
+{input}
 
 Condition:
 - try to suggest to best package for user's prompt which relate to price, age, gender and package's description
 - tell only package information
 - price in dollar
 
-Context:
+Context (health check-up packages):
 {packageInfo}
 
 Output:
@@ -143,9 +143,11 @@ var healthAdviceFunction = kernel.CreateSemanticFunction(
     // กำหนดค่าการทำงานของ AI โดยกำหนดให้ AI สร้างคำตอบที่มีความยาวไม่เกิน 1500 ตัวอักษร
     requestSettings: new OpenAIRequestSettings()
     {
-        MaxTokens = 1500,
-        Temperature = 0.1,
-        TopP = 1
+        MaxTokens = 2000,
+        Temperature = 0.2,
+        TopP = 1,
+        FrequencyPenalty = 0.1,
+        PresencePenalty = 0.1
     }
 );
 
