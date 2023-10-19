@@ -21,7 +21,7 @@ dotnet add reference ../AIPackageAdvice/AIPackageAdvice.csproj
     ... ข้อมูลอื่น ๆ ...
 
   <ItemGroup>
-    <ProjectReference Include="..\..\dotnet-test-console\dotnet-test-console.csproj" />
+    <ProjectReference Include="..\AIPackageAdvice\AIPackageAdvice.csproj" />
   </ItemGroup>
 
 </Project>
