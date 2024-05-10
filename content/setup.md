@@ -18,7 +18,7 @@
 1. .NET SDK & Runtime รุ่น LTS ([Download](https://dotnet.microsoft.com/en-us/download)) 
 2. Git Client ([Download](http://git-scm.com/download/) | [คลิปแนะนำการติดตั้ง](https://www.youtube.com/watch?v=fPOoIZbDKmE))
 3. Visual Studio Code ([Download](https://code.visualstudio.com/))
-   - เสร็จแล้วติดตั้งส่วนเสริม 
+   - เสร็จแล้วติดตั้งส่วนเสริม [Nextflow .NET Extension Pack](https://marketplace.visualstudio.com/items?itemName=teerasej.nextflow-dot-net-extension-pack)
 4. Web Browser สามารถเลือกระหว่าง 2 อย่างนี้ 
    1. Google Chrome ([Download](https://www.google.com/chrome/))
    2. Microsoft Edge ([Download](https://www.microsoft.com/en-us/edge/download))
