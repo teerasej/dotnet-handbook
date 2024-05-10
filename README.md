@@ -10,9 +10,6 @@ Survey
 3. [การสร้าง ASP.NET Web API](/content/dotnet-web-api/basic/README.md)
 4. [Object-Oriented Programming](content/oop/README.md)
 
-## Exercise 
-
-1. [Chat History API project](content/exercise/chat-history-api/README.md)
 
 ## .NET AI Application
 
