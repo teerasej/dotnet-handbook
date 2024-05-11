@@ -2,13 +2,44 @@
 
 เพื่อติดตั้งโปรเจค ASP.NET Core Web API ใหม่ ทำตามขั้นตอนเหล่านี้:
 
-1. เปิดเทอร์มินอลหรือคอมมานด์พรอม และป้อนคำสั่งต่อไปนี้:
+1. สร้าง directory ชื่อ `dotnetLab` จากนั้นเปิด Visual Studio Code ที่ directory นี้ และป้อนคำสั่งต่อไปนี้ใน terminal:
 
 ```bash
 dotnet new webapi -n ChatHistoryAPI
 ```
 
-2. เสร็จเรียบร้อยแล้วเปิดโฟลเดอร์โปรเจคขึ้นมาใน Visual Studio Code และรันคำสั่งด้านล่าง เพื่อรัน Web API
+> directory นี้สำคัญมาก เพราะนอกจากจะเป็น directory ที่เก็บโปรเจค Web API ของเราแล้ว ยังเป็น directory ที่เราจะใช้เก็บโปรเจคสำหรับทำ Test ด้วย
+
+2. เสร็จเรียบร้อยแล้วเปิดโฟลเดอร์โปรเจคขึ้นมาใน Visual Studio Code
+3. เปิดไฟล์ `.csproj` และแก้ไขค่าด้านล่าง จาก `true` ให้เป็น `false`
+
+จาก
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    ...
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  ...
+</Project>
+
+```
+เป็น
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    ...
+    <InvariantGlobalization>false</InvariantGlobalization>
+  </PropertyGroup>
+
+  ...
+</Project>
+
+```
+4. รันคำสั่งด้านล่าง เพื่อรัน Web API
 
 ```bash
 dotnet run
@@ -21,7 +52,7 @@ info: Microsoft.Hosting.Lifetime[14]
       Now listening on: http://localhost:5035
 ```
 
-3. เปิด swagger โดยใช้ URL ตัวอย่างด้านล่าง (อย่าลืมสังเกต เลข port ของ Web server ที่รันอยู่ใน terminal) 
+1. เปิด swagger โดยใช้ URL ตัวอย่างด้านล่าง (อย่าลืมสังเกต เลข port ของ Web server ที่รันอยู่ใน terminal) 
 
 ```
 https://localhost:5001/swagger

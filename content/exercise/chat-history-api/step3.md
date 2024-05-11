@@ -26,7 +26,7 @@ namespace ChatHistoryAPI
         }
 
         // สร้าง Route สำหรับ API นี้ โดยใช้ annotation HttpGet และระบุ URL ว่า /topics/{userID} เพื่อให้ Web API สามารถดึงส่วนที่กำหนดไว้ใน {} มาใช้งานได้
-        [HttpGet("topics/{userID}")]
+        [HttpGet("histories/{userID}/topics")]
 
         // สร้าง method สำหรับการดึงข้อมูลของ Chat history จาก UserID โดยรับค่า userID ผ่าน parameter ของ method และใช้ [FromRoute] annotation เพื่อระบุว่าค่านี้มาจาก Route URL
         public IActionResult GetTopicsByUserID([FromRoute] string userID)
