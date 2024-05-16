@@ -39,7 +39,39 @@ namespace ChatHistoryAPI
     }
 }
 ```
-4. บันทึกไฟล์ 
-5. ทดสอบรัน API ด้วยคำสั่ง `dotnet run` และใช้ Swagger ในการทดสอบส่ง request ไปที่ `https://localhost:5001/api/chat/histories` ดูว่า API ทำงานได้ถูกต้องหรือไม่
+4. บันทึกไฟล์
+5. เปิดไฟล์ `Program.cs`  และอัพเดตให้โค้ดเป็นแบบด้านล่าง
+
+```csharp
+using ChatHistoryAPI.Controllers;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// เพิ่มส่วนนี้เพื่อให้ทำงานกับ Api Controller
+builder.Services.AddControllers();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+// เพิ่มส่วนนี้ เพื่อให้เรียกใช้ controller route ได้
+app.MapControllers();
+
+app.Run();
+```
+
+6. ทดสอบรัน API ด้วยคำสั่ง `dotnet run` และใช้ Swagger ในการทดสอบส่ง request ไปที่ `https://localhost:5001/api/chat/histories` ดูว่า API ทำงานได้ถูกต้องหรือไม่
 
 > end
