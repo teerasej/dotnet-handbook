@@ -3,7 +3,7 @@
 
 [Survey](https://etc.ch/tzFd)
 
-## .NET 6 Starter 
+## .NET Starter 
 
 1. [การใช้งาน .NET CLI และการสร้าง Console App](/content/dotnet-cli/README.md)
 2. [การ Debug Application](/content/)
