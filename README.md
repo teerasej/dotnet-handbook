@@ -6,7 +6,7 @@
 ## .NET Starter 
 
 1. [การใช้งาน .NET CLI และการสร้าง Console App](/content/dotnet-cli/README.md)
-2. [การ Debug Application](/content/)
+2. [การ Debug Application](/content/debugging/README.md)
 3. [การสร้าง ASP.NET Web API](/content/dotnet-web-api/basic/README.md)
 4. [Object-Oriented Programming](content/oop/README.md)
 
