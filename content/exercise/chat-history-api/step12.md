@@ -3,7 +3,32 @@
 
 ในกรณีที่เกิด exception เราสามารถกำหนด custom error message ให้กับ API ได้โดยการสร้าง class สำหรับเก็บ error message และส่งกลับไปให้ Client ได้
 
-เปิดไฟล์ `ChatHistory.cs` และปรับปรุงโค้ดดังนี้
+1. เปิดไฟล์ `Models/Topics.cs` และปรัปปรุง code ดังนี้
+
+```csharp
+using System.ComponentModel.DataAnnotations;
+
+namespace ChatHistoryAPI.Models
+{
+    public class Topic
+    {   
+        [Key]
+        public Guid Id { get; set; }
+
+        // เพิ่ม annotation สำหรับกำหนดให้ค่าที่กำหนดให้ property ต้องมีความยาวไม่ต่ำกว่า 3 ตัวอักษร
+        [MinLength(3, ErrorMessage = "นั่นแน่ บอกแล่้วให้ส่งมามากกว่า 3 ตัวอักษร")]
+        public string Name { get; set; }
+
+        // เพิ่ม annotation สำหรับกำหนดให้ค่าที่กำหนดให้ property ต้องมีความยาวไม่เกิด 100 ตัวอักษร
+        [MaxLength(100)]
+        public string UserID { get; set; }
+
+        public ICollection<Message> Messages { get; set; } = new List<Message>();
+    }
+}
+```
+
+2. เปิดไฟล์ `ChatHistory.cs` และปรับปรุงโค้ดดังนี้
 
 ```csharp
 using System;
